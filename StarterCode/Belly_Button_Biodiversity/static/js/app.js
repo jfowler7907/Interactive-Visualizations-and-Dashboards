@@ -41,7 +41,7 @@ function buildCharts(sample) {
       width: 600
     };
     
-    Plotly.newPlot('plot', data, layout);
+    Plotly.newPlot('bubble', data, layout);
 
 
 
@@ -70,13 +70,13 @@ function buildCharts(sample) {
       showlegend: true
     }
 
-    Plotly.newPlot("plot", data, layout);
+    Plotly.newPlot("pie", data, layout);
 }
 
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
-
+console.log(selector)
   // Use the list of sample names to populate the select options
   d3.json("/names").then((sampleNames) => {
     sampleNames.forEach((sample) => {
